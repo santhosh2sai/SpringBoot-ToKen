@@ -1,0 +1,37 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Spring Security Tutorial</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	
+</head>
+
+<body>
+	<div class="container">
+    <div th:fragment="header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" th:href="@{/sai}">Home</a>
+                    <ul class="nav navbar-nav">
+                     <li><a href="#" th:href="@{/}">Login</a></li>
+                        <li><a href="#" th:href="@{/registration}">Registration</a></li>
+                        <li><a href="#" th:href="@{/purchase}">Purchase Token</a></li>
+                       
+                    </ul>
+ 
+                </div>
+            </div>
+        </nav>
+ <h1>Login SuccessFul</h1>
+        h1>Hello <b><c:out value="${pageContext.request.remoteUser}"/></b> </h1>
+    </div>
+</div>
+	
+</body>
+</html>
